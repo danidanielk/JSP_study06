@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//펑션활용 반복문 활용
+//행의 개수 열의 개수를 입력하면 행x 열의 테이블이 만들어지고
+//각 tb들에 숫자가 카운팅되어서 값이 나오게.
+
+function k() {
+	let wide = prompt('행 입력');
+	let high = prompt('열 입력');
+	alert(wide + "x"+ high +"의 table을 생성합니다.")
+	
+	let count =1;
+	
+	document.write("<table border='1'>")
+	for (var i = 0; i < high; i++) {
+		document.write("<tr height='50px'>");
+		for (var j = 0; j < wide; j++) {
+			document.write("<td widht='50px' align='center'>");
+			document.write(count);
+			document.write("</td>");
+			count++;
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+}
+
+</script>
+</head>
+<body>
+<div>자동 테이블생성기 + 자동숫자 카운트</div>
+<button onclick="k();">테이블 생성</button>
+</body>
+</html>

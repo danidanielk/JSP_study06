@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var a=0;
+	function  coin() {
+
+	}	
+	
+	function choiceDrink(){
+		if (a >= 3000){
+			alert('콜라,사이다,닥터페퍼,맥주,소주 선택가능');
+		}else if(a >= 2000){
+			alert('콜라,사이다,닥터페퍼,맥주 선택가능');
+		}else if(a >=1000){
+			
+			alert('콜라,사이다,닥터페퍼 선택가능');
+			
+		}else if(a >= 700){
+			alert('콜라,사이다 선택가능');
+			
+		}else if (a >=500){
+			
+			alert('콜라 선택가능');
+		}else {
+			alert('선택할수 있는 음료수 없음');
+		}
+		
+	}
+	function  k() {
+		a=a+100;
+		console.log("현재금액: "+a+"원");
+		choiceDrink();
+	}
+	function kk(){
+		a=a+500;
+		console.log("현재금액: "+a+"원");
+		choiceDrink();
+	
+	}
+	function kkk(){
+		a=a+1000;
+		console.log("현재금액: "+a+"원");
+		choiceDrink();
+	
+	}
+
+	function kkkk(){
+		console.log(a+"원이 환불됩니다.");
+		a=0;
+		console.log("현재금액: "+a+"원");
+	
+	}
+	//1.버튼 3개를 추가해서 각각 '100원' . 500원 , 1000원 텍스트 넣기
+	//2. 각버튼에 기능넣기
+	//3. 	500원 미만이면 선택할 수 있는 음료수 없음
+	//		500원 이상이면 콜라선택 가능
+	//		700원 이상이면 콜라,사이다 선택 가능
+	//		1000원 이상이면 콜라,사이다,닥터페퍼 선택가능
+	//		2000원 이상이면 콜라,사이다,닥터페퍼,맥주 선태가능
+	//		3000원 이상이면 콜라 사이다 닥터페퍼 맥주 소주 선택가능
+	//		==> alert로 출력
+	//4. 돈쌓이는거 log로 확인.
+	
+	
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+<div>콜라 : 500원</div>
+<div>사이다 : 700원</div>
+<div>닥터페퍼 : 1000원</div>
+<div>맥주 : 2000원</div>
+<div>소주 : 3000원</div>
+<hr>
+<button onclick="coin();">돈넣기</button>
+<button onclick="k();">100원</button>
+<button onclick="kk();">500원</button>
+<button onclick="kkk();">1000원</button>
+<button onclick="kkkk();">돈빼기</button>
+</body>
+</html>
